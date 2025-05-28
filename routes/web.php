@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return [
-        config('app.name') . ' is running!'
-    ];
-});
+Route::get('/', fn(): array => [
+    config('app.name') . ' is running!'
+]);
