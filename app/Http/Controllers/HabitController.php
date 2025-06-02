@@ -8,6 +8,13 @@ use App\Http\Requests\StoreHabitRequest;
 
 class HabitController extends Controller
 {
+    public function index()
+    {
+        return HabitResource::collection(
+            Habit::all()
+        );
+    }
+
     public function store(StoreHabitRequest $request)
     {
         $data = $request->validated();
