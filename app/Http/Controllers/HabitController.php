@@ -15,6 +15,11 @@ class HabitController extends Controller
         );
     }
 
+    public function show(Habit $habit)
+    {
+        return HabitResource::make($habit);
+    }
+
     public function store(StoreHabitRequest $request)
     {
         $data = $request->validated();
